@@ -1,16 +1,32 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeroesListComponent } from './components/heroes-list/heroes-list.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { HomeComponent } from './components/home/home.component';
+import { NewsComponent } from './components/news/news.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ServiceExampleComponent } from './components/service-example/service-example.component';
 
-const routes: Routes = [{
-  path: 'heroes',
-  component: HeroesListComponent
+const routes: Routes = [
+{
+  path: 'home',
+  component: HomeComponent
 },
 {
-  path: 'service',
-  component: ServiceExampleComponent
+  path: 'news',
+  component: NewsComponent
+},
+{
+  path: 'contact',
+  component: ContactComponent
+},
+{
+  path: 'about',
+  component: AboutComponent
+},
+{
+  path: '',
+  redirectTo: '/home',
+  pathMatch: 'full'
 },
 {
   path: '**', component: PageNotFoundComponent
