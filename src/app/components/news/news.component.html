@@ -6,4 +6,14 @@
         condimentum accumsan sed at ligula. Suspendisse vel urna molestie, rutrum sapien a, maximus neque. Sed faucibus
         lobortis pharetra. Maecenas pulvinar lectus eu feugiat fermentum.
     </p>
+    <p> Click on the below news items to read more...</p>
+    <div *ngFor="let news of newsList">
+        <li >   
+            <a [routerLink]="" (click)="onNewsLinkClicked(news.id)">{{news.id}}: 
+                </a> {{news.message}}
+            <a [routerLink]="" (click)="onNewsLinkClicked(news.id)">
+                read more...
+            </a>         
+        </li>
+    </div>
 </div>

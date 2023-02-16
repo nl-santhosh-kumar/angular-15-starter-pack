@@ -10,6 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { NewsComponent } from './components/news/news.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
+import { ContactChildComponent } from './components/contact/contact-child/contact-child.component';
+import { NewsInfoComponent } from './components/news/news-info/news-info.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { AboutComponent } from './components/about/about.component';
     HomeComponent,
     NewsComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    ContactChildComponent,
+    NewsInfoComponent
   ],
   imports: [
     BrowserModule,
