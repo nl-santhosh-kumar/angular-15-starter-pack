@@ -20,4 +20,9 @@ describe('NewsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should render title of the page', () => {    
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('.paragraph h2')?.textContent).toContain('News');
+  });
 });
